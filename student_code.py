@@ -42,11 +42,11 @@ class KnowledgeBase(object):
         """
         print("Asking {!r}".format(fact))
 	blist = ListOfBindings()
-	x = False
+	y = False
 	for x in self.facts:
 		bind = match(fact.statement, x.statement)
 		if bind != False:
 			blist.add_bindings(bind, self.facts)
-			x = True
-	if x: return blist
+			y = True
+	if y: return blist
 	else: return False
